@@ -26,7 +26,7 @@ variable "aws_region" {
 variable "tags" {
   default = {
     Team        = "VM Fusion - Development"
-    Application = "skeleton-ansible-role-with-test-user testing"
+    Application = "ansible-role-qualys-cloud-agent testing"
   }
   description = "Tags to apply to all AWS resources created"
   nullable    = false

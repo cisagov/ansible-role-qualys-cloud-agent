@@ -8,7 +8,7 @@ module "user" {
     aws.images-ssm              = aws.images_ssm
   }
 
-  entity = "skeleton-ansible-role-with-test-user"
+  entity = "ansible-role-qualys-cloud-agent"
   # If necessary, provide a list of SSM Parameter Store parameters that the test user needs to
   # be able to read.  In particular, roles that require access to
   # resources inside the third-party bucket will likely need to access the

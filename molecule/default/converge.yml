@@ -2,9 +2,9 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: Include skeleton-ansible-role-with-test-user
+    - name: Include ansible-role-qualys-cloud-agent
       ansible.builtin.include_role:
-        name: skeleton-ansible-role-with-test-user
+        name: ansible-role-qualys-cloud-agent
       # This is an example of passing role vars via AWS SSM Parameter
       # Store parameters.  In particular, roles that require access to
       # resources inside the third-party bucket will likely need the

@@ -1,8 +1,8 @@
-# skeleton-ansible-role-with-test-user #
+# ansible-role-qualys-cloud-agent #
 
-[![GitHub Build Status](https://github.com/cisagov/skeleton-ansible-role-with-test-user/workflows/build/badge.svg)](https://github.com/cisagov/skeleton-ansible-role-with-test-user/actions)
-[![License](https://img.shields.io/github/license/cisagov/skeleton-ansible-role-with-test-user)](https://spdx.org/licenses/)
-[![CodeQL](https://github.com/cisagov/skeleton-ansible-role-with-test-user/workflows/CodeQL/badge.svg)](https://github.com/cisagov/skeleton-ansible-role-with-test-user/actions/workflows/codeql-analysis.yml)
+[![GitHub Build Status](https://github.com/cisagov/ansible-role-qualys-cloud-agent/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-qualys-cloud-agent/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-qualys-cloud-agent)](https://spdx.org/licenses/)
+[![CodeQL](https://github.com/cisagov/ansible-role-qualys-cloud-agent/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-qualys-cloud-agent/actions/workflows/codeql-analysis.yml)
 
 This is a skeleton project that can be used to quickly get a new
 [cisagov](https://github.com/cisagov) Ansible role GitHub project
@@ -105,7 +105,7 @@ of the Project Setup README.
 
 If you have appropriate permissions for the repository you can view existing
 secrets on the
-[appropriate page](https://github.com/cisagov/skeleton-ansible-role-with-test-user/settings/secrets)
+[appropriate page](https://github.com/cisagov/ansible-role-qualys-cloud-agent/settings/secrets)
 in the repository's settings.
 
 ## Requirements ##
@@ -142,7 +142,7 @@ where `requirements.yml` looks like:
 ```yaml
 ---
 - name: skeleton
-  src: https://github.com/cisagov/skeleton-ansible-role-with-test-user
+  src: https://github.com/cisagov/ansible-role-qualys-cloud-agent
 ```
 
 and may contain other roles as well.

@@ -7,7 +7,7 @@ terraform {
     bucket         = ""
     dynamodb_table = "terraform-state-lock"
     encrypt        = true
-    key            = "skeleton-ansible-role-with-test-user/terraform.tfstate"
+    key            = "ansible-role-qualys-cloud-agent/terraform.tfstate"
     profile        = "cool-terraform-backend"
     region         = "us-east-1"
   }
