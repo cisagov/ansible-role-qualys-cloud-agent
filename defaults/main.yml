@@ -1,0 +1,3 @@
+---
+# The directory where the Qualys Cloud Agent is installed
+qualys_install_directory: /usr/local/qualys/cloud-agent

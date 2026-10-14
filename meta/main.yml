@@ -6,11 +6,12 @@
 # See also cisagov/skeleton-ansible-role#153.
 dependencies: []
 galaxy_info:
-  author: First Last
+  author: Shane Frasier
   company: CISA Cyber Assessments
-  description: Skeleton Ansible role with test user
+  description: Install the Qualys Cloud Agent for CISA CDM
   galaxy_tags:
-    - skeleton
+    - cdm
+    - qualys
   license: CC0-1.0
   # With the release of version 2.10, Ansible finally correctly
   # identifies Kali Linux as being the Kali distribution of the Debian
@@ -42,5 +43,5 @@ galaxy_info:
         - jammy
         - noble
         - resolute
-  role_name: skeleton_with_test_user
+  role_name: qualys
   standalone: true
