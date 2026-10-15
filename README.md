@@ -4,16 +4,9 @@
 [![License](https://img.shields.io/github/license/cisagov/ansible-role-qualys-cloud-agent)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-qualys-cloud-agent/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-qualys-cloud-agent/actions/workflows/codeql-analysis.yml)
 
-This is a skeleton project that can be used to quickly get a new
-[cisagov](https://github.com/cisagov) Ansible role GitHub project
-started, where that Ansible role requires an AWS test user for
-automated testing.
-
-This skeleton project contains [licensing information](LICENSE), as
-well as [pre-commit hooks](https://pre-commit.com) and [GitHub
-Actions](https://github.com/features/actions) configurations
-appropriate for an Ansible role, as well as the Terraform code to
-create the AWS test user.
+This is an Ansible role for installing the [Qualys Cloud
+Agent](https://www.qualys.com/cloud-agent), specifically for the CISA
+Continuous Diagnostics and Mitigation (CDM) environment.
 
 ## Pre-requisites ##
 
@@ -114,16 +107,9 @@ None.
 
 ## Role Variables ##
 
-None.
-
-<!-- markdownlint-disable line-length -->
-<!--
 | Variable | Description | Default | Required |
 | -------- | ----------- | ------- | -------- |
-| skeleton_with_test_user_bucket_name | The name of the AWS S3 bucket where the third-party files are stored. | None | Yes |
-| skeleton_with_test_user_license_object_name | The name of the AWS S3 object that is the third-party license. | `closed_source_tool.license` | No |
--->
-<!-- markdownlint-enable line-length -->
+| qualys\_third\_party\_bucket\_name | The name of the AWS S3 bucket where third-party software is located. | n/a | Yes |
 
 ## Dependencies ##
 
@@ -141,7 +127,7 @@ where `requirements.yml` looks like:
 
 ```yaml
 ---
-- name: skeleton
+- name: qualys
   src: https://github.com/cisagov/ansible-role-qualys-cloud-agent
 ```
 
@@ -160,17 +146,10 @@ Here's how to use it in a playbook:
   become: true
   become_method: sudo
   tasks:
-    - name: Include skeleton
+    - name: Include Qualys Cloud Agent
       ansible.builtin.include_role:
-        name: skeleton
+        name: qualys
 ```
-
-## New Repositories from a Skeleton ##
-
-Please see our [Project Setup guide](https://github.com/cisagov/development-guide/tree/develop/project_setup)
-for step-by-step instructions on how to start a new repository from
-a skeleton. This will save you time and effort when configuring a
-new repository!
 
 ## Contributing ##
 
@@ -192,4 +171,4 @@ with this waiver of copyright interest.
 
 ## Author Information ##
 
-First Last - <first.last@gwe.cisa.dhs.gov>
+Shane Frasier - <jeremy.frasier@gwe.cisa.dhs.gov>

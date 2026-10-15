@@ -1,15 +1,20 @@
-output "access_key" {
-  description = "The IAM access key associated with the CI IAM user created by this module."
-  sensitive   = true
-  value       = module.user.access_key
+output "bucket_access_policy" {
+  description = "The IAM policy that can read the specified objects from the specified S3 bucket."
+  value       = module.bucket_access.policy
 }
 
-output "role" {
-  description = "The IAM role that the CI user can assume to read SSM parameters in the Images account."
+output "bucket_access_role" {
+  description = "The IAM role that can read the specified objects from the specified S3 bucket."
   value       = module.user.role
 }
 
 output "user" {
-  description = "The CI IAM user created by this module."
+  description = "The IAM user being created to test the cisagov/ansible-role-qualys-cloud-agent Ansible role."
   value       = module.user.user
+}
+
+output "user_access_key" {
+  description = "The IAM access key for the IAM user being created to test the cisagov/ansible-role-qualys-cloud-agent Ansible role."
+  sensitive   = true
+  value       = module.user.access_key
 }
