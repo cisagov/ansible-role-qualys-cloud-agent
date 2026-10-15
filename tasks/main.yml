@@ -46,9 +46,9 @@
         - name: Grab the Qualys Cloud Agent system package from S3
           amazon.aws.s3_object:
             bucket: "{{ qualys_third_party_bucket_name }}"
-            object: "{{ package_file }}"
             dest: /tmp/{{ package_file }}
             mode: get
+            object: "{{ package_file }}"
           become: false
           delegate_to: localhost
 
