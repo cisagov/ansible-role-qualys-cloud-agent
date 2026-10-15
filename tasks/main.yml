@@ -16,8 +16,17 @@
         - "{{ role_path }}/vars"
 
 # Needed to check if Qualys Cloud Agent is already installed
-- name: Get a list of the packages installed
-  ansible.builtin.package_facts:
+- name: Fetch a list of the packages installed
+  block:
+    - name: Install missing pre-requisite for Fedora
+      ansible.builtin.package:
+        name:
+          - python3-rpm
+        state: present
+      when: ansible_distribution == "Fedora"
+
+    - name: Fetch a list of the packages installed
+      ansible.builtin.package_facts:
 
 - name: Install the Qualys Cloud Agent
   when: not "qualys-cloud-agent" in ansible_facts["packages"]
