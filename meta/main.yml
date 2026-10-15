@@ -18,7 +18,10 @@ galaxy_info:
   # OS family.  This simplifies a lot of things for roles that support
   # Kali Linux, so it makes sense to force the installation of Ansible
   # 2.10 or newer.
-  min_ansible_version: "2.10"
+  #
+  # Release 2.14 was the first to introduce
+  # ansible.builtin.systemd_service, which we use in this role.
+  min_ansible_version: "2.14"
   namespace: cisagov
   platforms:
     - name: Amazon Linux
