@@ -1,15 +1,6 @@
 ---
 - name: Import Qualys Cloud Agent system package GPG key
   block:
-    # # The Fedora 41 Docker container we use for Molecule testing does
-    # # not have GPG installed by default.
-    # - name: Install gpg
-    #   ansible.builtin.package:
-    #     name:
-    #       - gnupg2
-    #   when:
-    #     - ansible_distribution == "Fedora"
-
     - name: Grab Qualys Cloud Agent system package GPG key from S3
       amazon.aws.s3_object:
         bucket: "{{ qualys_third_party_bucket_name }}"
