@@ -70,7 +70,8 @@
                 - "{{ role_path }}/tasks"
 
         - name: Enable the Qualys Cloud Agent service
-          ansible.builtin.service:
+          ansible.builtin.systemd_service:
+            daemon_reload: true
             enabled: true
             name: qualys-cloud-agent
 
