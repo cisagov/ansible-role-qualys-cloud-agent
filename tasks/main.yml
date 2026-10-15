@@ -69,6 +69,20 @@
               paths:
                 - "{{ role_path }}/tasks"
 
+        # For some reason the systemd unit file doesn't get created in
+        # the correct place on Fedora and Kali, but this is easily
+        # fixed.
+        - name: >-
+            Symlink the Qualys Cloud Agent systemd service unit file
+            to the correct location
+          ansible.builtin.file:
+            group: root
+            owner: root
+            path: /etc/systemd/system/qualys-cloud-agent.service
+            src: /etc/qualys/cloud-agent/.systemd/qualys-cloud-agent.service
+            state: link
+          when: ansible_distribution in ["Fedora", "Kali"]
+
         - name: Enable the Qualys Cloud Agent service
           ansible.builtin.systemd_service:
             daemon_reload: true
