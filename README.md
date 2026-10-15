@@ -109,7 +109,6 @@ None.
 
 | Variable | Description | Default | Required |
 | -------- | ----------- | ------- | -------- |
-| qualys\_install\_directory | The directory where Qualys Cloud Agent is installed. | `/usr/local/qualys/cloud-agent` | No |
 | qualys\_third\_party\_bucket\_name | The name of the AWS S3 bucket where third-party software is located. | n/a | Yes |
 
 ## Dependencies ##
