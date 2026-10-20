@@ -1,0 +1,4 @@
+---
+- name: Install the Qualys Cloud Agent (Debian)
+  ansible.builtin.apt:
+    deb: /tmp/{{ package_file }}

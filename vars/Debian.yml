@@ -1,0 +1,26 @@
+---
+# A dictionary whose keys are values of the Ansible fact
+# ansible_architecture and whose values are processor architecture for
+# which Qualys Cloud Agent is to be installed, as specified in the
+# Qualys Cloud Agent package filename.
+architectures:
+  aarch64: arm64
+  x86_64: x86_64
+
+# A regex that will match the name of the Qualys Cloud Agent package
+# file that should be installed.
+package_file_regex: >-
+  QualysCloudAgent-{{ versions[ansible_architecture]
+  }}-{{ architectures[ansible_architecture] }}.deb
+
+# The name of the S3 object corresponding to the GPG key for the
+# Qualys Cloud Agent system package.
+package_gpg_key_object_name: sha2_qualys_cloud_agent_gpg.key
+
+# A dictionary whose keys are values of the Ansible fact
+# ansible_architecture and whose values are the version of Qualys
+# Cloud Agent to be installed, as specified in the Qualys Cloud Agent
+# package filename.
+versions:
+  aarch64: 7.3.0.21
+  x86_64: 7.5.0.41
